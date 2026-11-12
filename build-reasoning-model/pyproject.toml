@@ -1,0 +1,19 @@
+[project]
+name = "build-reasoning-model"
+version = "0.1.0"
+description = "A small reasoning model, built brick by brick"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "datasets>=5.2.0",
+    "peft>=0.21.2",
+    "torch>=2.6",
+    "transformers>=4.50",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
