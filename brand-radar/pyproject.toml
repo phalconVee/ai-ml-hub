@@ -1,0 +1,25 @@
+[project]
+name = "brand-radar"
+version = "0.1.0"
+description = "Multi-agent brand monitoring: keyless mention collection, per-source Claude analysts, actionable report"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "anthropic>=2.8.0",
+    "ddgs>=9.16.1",
+    "httpx>=0.28.1",
+    "pandas>=2.3.0",
+    "pydantic>=2.14.3",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.67.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.5.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

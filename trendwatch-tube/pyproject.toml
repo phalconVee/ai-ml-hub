@@ -1,0 +1,22 @@
+[project]
+name = "trendwatch-tube"
+version = "0.1.0"
+description = "A small crew of Claude agents that watches YouTube channels and explains what's trending"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "anthropic>=2.8.0",
+    "httpx>=0.28",
+    "pydantic>=2.11",
+    "python-dotenv>=1.1",
+    "streamlit>=1.67",
+    "youtube-transcript-api>=1.2.5",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

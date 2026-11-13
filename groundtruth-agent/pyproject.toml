@@ -1,0 +1,19 @@
+[project]
+name = "groundtruth-agent"
+version = "0.1.0"
+description = "An agent that answers questions from complex PDFs (tables, figures) with cited, grounded answers"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "anthropic>=1.0",
+    "pymupdf>=1.25",
+    "python-dotenv>=1.0",
+    "streamlit>=1.40",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

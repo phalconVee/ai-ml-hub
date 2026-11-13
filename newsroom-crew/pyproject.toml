@@ -1,0 +1,18 @@
+[project]
+name = "newsroom-crew"
+version = "0.1.0"
+description = "A multi-agent news desk: a reporter gathers live sources, a writer drafts a sourced article, an editor checks it"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=2.8.0",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.67.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
