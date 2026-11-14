@@ -1,0 +1,28 @@
+[project]
+name = "memoir-avatar"
+version = "0.1.0"
+description = "A talking-avatar companion that remembers you: every chat turn grows a local knowledge graph that later answers draw on"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "anthropic>=2.8.0",
+    "networkx>=3.5",
+    "numpy>=2.0",          # networkx.spring_layout needs it for the graph view
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.67.0",
+]
+
+[project.optional-dependencies]
+# Local neural TTS (free, offline after a one-time ~120 MB model download).
+# Without it the app uses macOS `say` or the browser's own speech synthesis.
+kokoro = [
+    "kokoro-onnx>=0.6.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+markers = ["live: touches a real local TTS engine (skipped when it is not available)"]

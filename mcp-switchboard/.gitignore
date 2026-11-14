@@ -1,0 +1,6 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+# sandbox data written by the file server (created on first run)
+sandbox/

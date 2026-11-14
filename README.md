@@ -55,16 +55,16 @@ Status key: ⬜ planned · 🚧 in progress · 🧪 built, offline tests pass, n
 ### 2. MCP agents
 | Project | Idea | Status |
 |---|---|---|
-| soundcheck-mcp | Audio analysis toolkit served over MCP | ⬜ |
-| webpilot-mcp | Chat UI that drives a browser-automation MCP server | ⬜ |
-| mcp-switchboard | One chat UI over several configurable MCP servers | ⬜ |
+| [soundcheck-mcp](soundcheck-mcp/) | Audio analysis toolkit served over MCP | 🧪 |
+| [webpilot-mcp](webpilot-mcp/) | Chat UI that drives a browser-automation MCP server | 🧪 |
+| [mcp-switchboard](mcp-switchboard/) | One chat UI over several configurable MCP servers | 🧪 |
 
 ### 3. Agent memory
 | Project | Idea | Status |
 |---|---|---|
-| recall-companion | Assistant with long-term, human-like memory | ⬜ |
-| vault-memory-agent | Agent with vector-database memory and RAG | ⬜ |
-| memoir-avatar | Knowledge-graph memory behind a talking avatar | ⬜ |
+| [recall-companion](recall-companion/) | Assistant with long-term, human-like memory | 🧪 |
+| [vault-memory-agent](vault-memory-agent/) | Agent with vector-database memory and RAG | 🧪 |
+| [memoir-avatar](memoir-avatar/) | Knowledge-graph memory behind a talking avatar | 🧪 |
 
 ### 4. Tool-using agents and agentic RAG
 | Project | Idea | Status |

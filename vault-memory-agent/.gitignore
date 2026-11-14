@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+# The local database (documents, vectors, threads, notes) lives here (see VAULT_DB).
+.vault/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+# fastembed model downloads, if you point FASTEMBED_CACHE_PATH inside the project.
+.fastembed_cache/
+models/

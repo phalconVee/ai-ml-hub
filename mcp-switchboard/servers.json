@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "files": {
+      "description": "Read/write files, jailed to ./sandbox (writes need approval)",
+      "command": "${PYTHON}",
+      "args": ["-m", "example_servers.sandbox_files"],
+      "enabled": true
+    },
+    "calc": {
+      "description": "Safe calculator, current time, time-zone and date maths",
+      "command": "${PYTHON}",
+      "args": ["-m", "example_servers.calc_clock"],
+      "enabled": true
+    },
+    "web": {
+      "description": "Keyless web search, Wikipedia search, read any public page",
+      "command": "${PYTHON}",
+      "args": ["-m", "example_servers.web_reader"],
+      "enabled": true
+    },
+    "web-http": {
+      "description": "Same web server over Streamable HTTP. Start it first: uv run python -m example_servers.web_reader --http",
+      "url": "http://127.0.0.1:8765/mcp",
+      "enabled": false
+    },
+    "official-fs": {
+      "description": "The reference Node filesystem server on ./sandbox (needs Node.js; npx downloads it)",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "${PROJECT_DIR}/sandbox"],
+      "enabled": false
+    }
+  }
+}

@@ -1,0 +1,18 @@
+[project]
+name = "recall-companion"
+version = "0.1.0"
+description = "A chat assistant with human-like long-term memory: a local temporal knowledge store you can inspect and edit"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=2.8.0",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.67.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

@@ -1,0 +1,25 @@
+# Secrets and environments
+.env
+.venv/
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Runtime data: uploaded audio and cached transcripts
+data/
+
+# Any audio or model files that end up in the project folder
+*.wav
+*.mp3
+*.m4a
+*.aiff
+*.aif
+*.flac
+*.ogg
+*.opus
+*.webm
+*.mp4
+models/
+.cache/

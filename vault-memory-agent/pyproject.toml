@@ -1,0 +1,22 @@
+[project]
+name = "vault-memory-agent"
+version = "0.1.0"
+description = "An agent whose memory lives in a local database: a vector-searched knowledge base, per-thread chat history, and notes it chooses to remember"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "anthropic>=2.8",
+    "fastembed>=0.5",
+    "pypdf>=5.0",
+    "python-dotenv>=1.0",
+    "sqlite-vec>=0.1.6",
+    "streamlit>=1.40",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+filterwarnings = ["ignore:builtin type .* has no __module__:DeprecationWarning"]

@@ -1,0 +1,7 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+# the local memory database (your profiles, chats and facts)
+.recall/
+*.db
