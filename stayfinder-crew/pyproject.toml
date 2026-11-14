@@ -1,0 +1,18 @@
+[project]
+name = "stayfinder-crew"
+version = "0.1.0"
+description = "Multi-agent hotel finder: plain-language stay in, compared and recommended hotels out (information only, no booking). Claude or a local Ollama model."
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic>=2.8.0",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.67.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

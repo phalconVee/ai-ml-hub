@@ -1,0 +1,27 @@
+[project]
+name = "sourcebook"
+version = "0.1.0"
+description = "A from-scratch, NotebookLM-style research notebook: cited answers from your sources, conversation memory, and a two-host audio overview"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "anthropic>=2.8",
+    "pymupdf>=1.25",
+    "python-dotenv>=1.0",
+    "streamlit>=1.40",
+]
+
+[project.optional-dependencies]
+# Local embeddings (ONNX, no key, ~70 MB model download on first use).
+# Turns retrieval into hybrid BM25 + dense search fused with RRF.
+dense = [
+    "fastembed>=0.5",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+filterwarnings = ["ignore:builtin type .* has no __module__:DeprecationWarning"]

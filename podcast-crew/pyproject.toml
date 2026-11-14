@@ -1,0 +1,26 @@
+[project]
+name = "podcast-crew"
+version = "0.1.0"
+description = "A crew of Claude agents turns a web page or pasted text into a two-host podcast episode, voiced by a local TTS"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "anthropic>=2.8.0",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.67.0",
+]
+
+[project.optional-dependencies]
+# Local neural TTS (free, offline after a one-time ~120 MB model download).
+# Without it the app falls back to macOS `say`, which needs no install at all.
+kokoro = [
+    "kokoro-onnx>=0.6.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+markers = ["live: touches a real local TTS engine (skipped when it is not available)"]

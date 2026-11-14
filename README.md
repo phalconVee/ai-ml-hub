@@ -19,6 +19,14 @@ Every project is built **from scratch, in my own code**, with heavy comments, so
 |---|---|---|---|
 | [build-reasoning-model](build-reasoning-model/) | A small reasoning model trained with GRPO, written from scratch | PyTorch, GRPO | ✅ Done |
 
+## Original projects
+
+Net-new ideas of my own, not drawn from any reference list.
+
+| Project | Idea | Stack | Status |
+|---|---|---|---|
+| [sightline](sightline/) | Live webcam vision: classify and locate objects, with confidence thresholds that decide between auto-accept and human review | TypeSafe Jev decision API, Streamlit | 🧪 |
+
 ## Roadmap: Streamlit projects
 
 The next wave is inspired by the Streamlit-based projects in [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub). I rebuild each idea independently, under my own name, in its own folder. Groups are ordered by how agentic they are.
@@ -38,11 +46,11 @@ Status key: ⬜ planned · 🚧 in progress · 🧪 built, offline tests pass, n
 | [brand-radar](brand-radar/) | Watches the web for mentions of a brand | 🧪 |
 | [context-forge](context-forge/) | Multi-source research assistant built on agent flows | 🧪 |
 | [skyfare-scout](skyfare-scout/) | Multi-agent flight search | 🧪 |
-| stayfinder-crew | Local multi-agent hotel finder | ⬜ |
-| counsel-copilot | Legal-document Q&A crew | ⬜ |
-| local-handoff-swarm | Lightweight agent handoffs on a local model | ⬜ |
-| podcast-crew | Turns web content into a two-voice podcast, via agents | ⬜ |
-| sourcebook | Answers grounded in your documents, with citations and audio | ⬜ |
+| [stayfinder-crew](stayfinder-crew/) | Local multi-agent hotel finder | 🧪 |
+| [counsel-copilot](counsel-copilot/) | Legal-document Q&A crew | 🧪 |
+| [local-handoff-swarm](local-handoff-swarm/) | Lightweight agent handoffs on a local model | 🧪 |
+| [podcast-crew](podcast-crew/) | Turns web content into a two-voice podcast, via agents | 🧪 |
+| [sourcebook](sourcebook/) | Answers grounded in your documents, with citations and audio | 🧪 |
 
 ### 2. MCP agents
 | Project | Idea | Status |

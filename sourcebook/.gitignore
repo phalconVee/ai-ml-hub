@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+# Notebooks, chat memory and generated audio live here (see SOURCEBOOK_HOME).
+.sourcebook/
+*.wav

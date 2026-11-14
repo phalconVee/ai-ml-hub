@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+# generated audio and downloaded TTS model files
+episodes/
+models/
+*.wav
+*.mp3
+*.onnx
+*.bin

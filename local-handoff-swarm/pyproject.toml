@@ -1,0 +1,20 @@
+[project]
+name = "local-handoff-swarm"
+version = "0.1.0"
+description = "A tiny multi-agent system built on handoffs: triage routes, specialists hand the conversation to each other. Runs locally on Ollama; Claude optional."
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "anthropic>=2.8.0",
+    "ddgs>=9.16.1",
+    "ollama>=0.6.3",
+    "python-dotenv>=1.2.4",
+    "streamlit>=1.67.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
