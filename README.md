@@ -4,7 +4,7 @@ A working lab of **agentic AI projects** I'm building to learn and practise: mul
 
 Every project is built **from scratch, in my own code**, with heavy comments, so each one can be read line by line and explained. Nothing here is a copy-paste fork.
 
-**Where this is going:** this repo becomes the source behind a **portfolio**. Each finished project gets a short write-up, a demo (most use a Streamlit UI), and a link from the portfolio site back to its folder here.
+**Where this is going:** this repo is the source behind my **portfolio**. Each project gets a short write-up, a demo (most have a Streamlit UI), and a link from the portfolio back to its folder here.
 
 ## How the repo is organised
 
@@ -15,109 +15,59 @@ Every project is built **from scratch, in my own code**, with heavy comments, so
 
 ## Projects
 
-| Project | What it is | Stack | Status |
-|---|---|---|---|
-| [build-reasoning-model](build-reasoning-model/) | A small reasoning model trained with GRPO, written from scratch | PyTorch, GRPO | ✅ Done |
-
-## Original projects
-
-Net-new ideas of my own, not drawn from any reference list.
-
-| Project | Idea | Stack | Status |
-|---|---|---|---|
-| [sightline](sightline/) | Live webcam vision: classify and locate objects, with confidence thresholds that decide between auto-accept and human review | TypeSafe Jev decision API, Streamlit | 🧪 |
-
-## Roadmap: Streamlit projects
-
-The next wave is inspired by the Streamlit-based projects in [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub). I rebuild each idea independently, under my own name, in its own folder. Groups are ordered by how agentic they are.
-
-Status key: ⬜ planned · 🚧 in progress · 🧪 built, offline tests pass, not yet run with live API keys · ✅ done
-
-### 1. Multi-agent systems and workflows
-| Project | Idea | Status |
+### Multi-agent systems and workflows
+| Project | What it does | Built with |
 |---|---|---|
-| [deepdive-research-crew](deepdive-research-crew/) | Multi-agent deep web researcher, wired together over MCP | 🧪 |
-| [omni-scout](omni-scout/) | Researcher that searches across many platforms at once | 🧪 |
-| [trendwatch-tube](trendwatch-tube/) | Agents that spot and explain YouTube trends | 🧪 |
-| [fallback-sage](fallback-sage/) | Answers from your docs first, falls back to the web | 🧪 |
-| [groundtruth-agent](groundtruth-agent/) | Agent with a custom document-retrieval tool | 🧪 |
-| [newsroom-crew](newsroom-crew/) | Research-and-write news desk | 🧪 |
-| [paper-lab-analyst](paper-lab-analyst/) | Reads paper figures with OCR, then agents analyse them | 🧪 |
-| [brand-radar](brand-radar/) | Watches the web for mentions of a brand | 🧪 |
-| [context-forge](context-forge/) | Multi-source research assistant built on agent flows | 🧪 |
-| [skyfare-scout](skyfare-scout/) | Multi-agent flight search | 🧪 |
-| [stayfinder-crew](stayfinder-crew/) | Local multi-agent hotel finder | 🧪 |
-| [counsel-copilot](counsel-copilot/) | Legal-document Q&A crew | 🧪 |
-| [local-handoff-swarm](local-handoff-swarm/) | Lightweight agent handoffs on a local model | 🧪 |
-| [podcast-crew](podcast-crew/) | Turns web content into a two-voice podcast, via agents | 🧪 |
-| [sourcebook](sourcebook/) | Answers grounded in your documents, with citations and audio | 🧪 |
+| [deepdive-research-crew](deepdive-research-crew/) | Planner, parallel scouts, analyst and writer research a question in depth | Claude, MCP |
+| [omni-scout](omni-scout/) | Scouts search several platforms in parallel, then one report merges the findings | Claude, MCP |
+| [trendwatch-tube](trendwatch-tube/) | Agents read recent videos from chosen YouTube channels and explain emerging trends | Claude, YouTube feeds |
+| [fallback-sage](fallback-sage/) | Answers from your documents first, and searches the web only when they fall short | Claude, BM25, web search |
+| [groundtruth-agent](groundtruth-agent/) | Agent answers questions about complex PDFs (tables, figures) with citations | Claude tool use, citations |
+| [newsroom-crew](newsroom-crew/) | Reporter, writer and editor produce a sourced article, with a citation audit | Claude, web search |
+| [paper-lab-analyst](paper-lab-analyst/) | Reads a scientific paper, figures included, and writes a structured analysis | Claude vision, PDF extraction |
+| [brand-radar](brand-radar/) | Collects brand mentions across sources and reports sentiment and themes | Claude |
+| [context-forge](context-forge/) | Research assistant that picks the best context from docs, web, papers and memory | Claude, arXiv, web search |
+| [skyfare-scout](skyfare-scout/) | Turns a trip description into flight searches and ranked recommendations | Claude |
+| [stayfinder-crew](stayfinder-crew/) | Hotel finder crew that runs on Claude or fully locally | Claude or Ollama, OpenStreetMap |
+| [counsel-copilot](counsel-copilot/) | Plain-English, cited answers about contracts and other legal PDFs | Claude, RAG, web search |
+| [local-handoff-swarm](local-handoff-swarm/) | Agents hand the conversation to each other mid-task, via a hand-written loop | Ollama, Claude |
+| [podcast-crew](podcast-crew/) | Turns a web page or text into a two-host podcast episode | Claude, local TTS |
+| [sourcebook](sourcebook/) | Research notebook: cited answers from your sources, plus an audio overview | Claude citations, hybrid search, local TTS |
 
-### 2. MCP agents
-| Project | Idea | Status |
+### MCP agents
+| Project | What it does | Built with |
 |---|---|---|
-| [soundcheck-mcp](soundcheck-mcp/) | Audio analysis toolkit served over MCP | 🧪 |
-| [webpilot-mcp](webpilot-mcp/) | Chat UI that drives a browser-automation MCP server | 🧪 |
-| [mcp-switchboard](mcp-switchboard/) | One chat UI over several configurable MCP servers | 🧪 |
+| [soundcheck-mcp](soundcheck-mcp/) | Audio-analysis tools served over MCP, with a chat app to question a recording | MCP, local Whisper, Claude |
+| [webpilot-mcp](webpilot-mcp/) | Claude drives a real browser through an MCP server, within guard rails | MCP, Playwright, Claude |
+| [mcp-switchboard](mcp-switchboard/) | One chat UI over several MCP servers, with approval before anything writes | MCP (stdio and HTTP), Claude |
 
-### 3. Agent memory
-| Project | Idea | Status |
+### Agent memory
+| Project | What it does | Built with |
 |---|---|---|
-| [recall-companion](recall-companion/) | Assistant with long-term, human-like memory | 🧪 |
-| [vault-memory-agent](vault-memory-agent/) | Agent with vector-database memory and RAG | 🧪 |
-| [memoir-avatar](memoir-avatar/) | Knowledge-graph memory behind a talking avatar | 🧪 |
+| [recall-companion](recall-companion/) | Assistant that remembers facts across sessions and updates them when they change | Claude, SQLite |
+| [vault-memory-agent](vault-memory-agent/) | Agent that stores and recalls documents, threads and its own notes | Claude, SQLite + sqlite-vec |
+| [memoir-avatar](memoir-avatar/) | Talking avatar backed by a knowledge graph of what you've told it | Claude, networkx, local TTS |
 
-### 4. Tool-using agents and agentic RAG
-| Project | Idea | Status |
+### Vision
+| Project | What it does | Built with |
 |---|---|---|
-| webcrawl-sage | RAG agent with live web search | ⬜ |
-| query-dispatcher | Routes each question to vector search or SQL | ⬜ |
-| self-check-rag | RAG that grades and corrects its own retrieval | ⬜ |
-| site2api | Turns any website into a structured API | ⬜ |
-| article-to-airwaves | Article to podcast script and audio | ⬜ |
+| [sightline](sightline/) | Classifies and locates objects from your webcam; confidence thresholds decide what is auto-accepted and what goes to human review | TypeSafe Jev |
 
-### 5. RAG applications
-| Project | Idea | Status |
+### Model training
+| Project | What it does | Built with |
 |---|---|---|
-| listen-and-ask | Ask questions about audio recordings | ⬜ |
-| repo-whisperer | Chat with a GitHub repository | ⬜ |
-| docs-dialogue | Chat with your documents | ⬜ |
-| sub-15ms-rag | RAG stack tuned for retrieval under 15 ms | ⬜ |
-| quickdraw-rag | Fast chat-with-docs stack | ⬜ |
-| repo-digest-rag | Flattens a repo to markdown, then runs RAG over it | ⬜ |
-| llama-four-lens | RAG on Llama 4 | ⬜ |
-| local-bert-rag | Fully local RAG with ModernBERT embeddings | ⬜ |
-| spreadsheet-sage | RAG over spreadsheets and other complex documents | ⬜ |
-| confidence-rag | RAG answers that come with a trust score | ⬜ |
-| dense-doc-pipeline | Pipeline for documents full of tables and figures | ⬜ |
-| frame-talk | Chat with uploaded videos | ⬜ |
-| pixel-page-rag | Multimodal RAG over web pages captured as images | ⬜ |
-| janus-vision-rag | Multimodal RAG with Janus-Pro | ⬜ |
-| polyglot-minutes | Detects the meeting's language, then writes English notes | ⬜ |
+| [build-reasoning-model](build-reasoning-model/) | A small reasoning model trained with GRPO, with the algorithm written from scratch | PyTorch, GRPO |
 
-### 6. Evaluation and model comparison
-| Project | Idea | Status |
-|---|---|---|
-| code-arena | Pick models and compare their code generation | ⬜ |
-| reasoning-arena | Reasoning evals scored with G-Eval | ⬜ |
-| rag-model-duel | Side-by-side RAG model comparison, with tracing | ⬜ |
-| frontier-coder-faceoff | Four-way code-generation comparison | ⬜ |
-| rag-eval-pipeline | End-to-end RAG evaluation and observability | ⬜ |
-| retrieval-duel | Two reasoning models compared on RAG | ⬜ |
-| coder-scorecard | Code-generation evals using DeepEval | ⬜ |
-| open-vs-closed-coder | Open-weight vs closed-model coding evals | ⬜ |
+## Running a project
 
-### 7. Local model UIs and vision
-| Project | Idea | Status |
-|---|---|---|
-| think-aloud-chat | Local chat UI that shows the model's reasoning | ⬜ |
-| open-mind-chat | Local reasoning UI for an open-weight model | ⬜ |
-| pocket-thinker | Small local reasoning model in a chat UI | ⬜ |
-| glyph-extractor | Local OCR and structured data extraction | ⬜ |
-| page-reader | Local OCR app | ⬜ |
-| equation-snap | Photo of an equation to LaTeX | ⬜ |
-| vision-scribe | OCR with a vision-language model | ⬜ |
-| dream-and-describe | Local image generation and visual Q&A | ⬜ |
+```bash
+cd <project-folder>
+cp .env.example .env   # then add your keys
+uv run streamlit run app.py
+```
 
-## Credits
+Each project's own README has the exact steps and the keys it needs (`build-reasoning-model` is a training project and has its own instructions).
 
-Project ideas in the roadmap are inspired by [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub). All names and implementations here are my own.
+## Acknowledgements
+
+Some project ideas were sparked by [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub).
